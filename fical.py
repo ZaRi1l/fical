@@ -1,6 +1,35 @@
+import pandas as pd
+
 # 이동 평균선
 def ma(source, length):     
     return source.rolling(window=length).mean()
+
+
+# 최대 최소값
+def max(source, length):
+    return source.rolling(window=length).max()
+
+def min(source, length):
+    return source.rolling(window=length).min()
+
+
+# rsi 미완성
+# def rsi(source, length):
+#     sourceu = source
+#     sourced = source
+    
+#     for i in range(0, -length, -1):
+#         if source[i] > source.shift(-1):
+#             sourceu.append(source - source.shift(-1).fillna(0))
+#         elif source[i] <= source[i-1]:
+#             sourced.append(source.shift(-1).fillna(0) - source)
+    
+#     print(sourceu)
+#     au = sum(u)/len(u)
+#     ad = sum(d)/len(d)
+#     rs = au/ad
+    
+#     return rs / (rs + 1) * 100
 
 
 # 스토캐스틱
