@@ -6,10 +6,10 @@ def ma(source, length):
 
 
 # 최대 최소값
-def max(source, length):
+def recent_max(source, length):
     return source.rolling(window=length).max()
 
-def min(source, length):
+def recent_min(source, length):
     return source.rolling(window=length).min()
 
 
